@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <head>
+    <!--NAME IN PROGRESS-->
+    <title> Mx </title>
+  </head>
+  
+  <h1> Mx </h1>
+  
+  <button onclick="toggleMode()"> Toggle </button>
+  
+
+  
+  <script>
+    function toggleMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+}
+  </script>
+  
+  <style>
+    body {
+      background: linear-gradient(180deg, rgba(0,255,0, 40%), rgba(0,0,255, 60%));
+      background-attachment: fixed;
+      font-family: sans-serif;
+    }
+    
+    .dark-mode {
+      background: linear-gradient(180deg, rgba(0,0,0, 40%), rgba(0,0,0, 80%));
+      background-attachment: fixed;
+    }
+  </style>
+
+  
+
+</body>
+</html>
