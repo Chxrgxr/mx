@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Webhook Sender</title>
+  <title>Suggestions</title>
 </head>
 <body>
-  <h1>Webhook Sender</h1>
+  <h1>Send a Suggestion to add to the website or report issues!</h1>
   <form id="webhookForm">
     <label for="message">Suggestion:</label>
     <input type="text" id="message" name="message" required>
@@ -17,7 +17,6 @@
 document.getElementById('webhookForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const name = document.getElementById('name').value;
   const message = document.getElementById('message').value;
 
   // Create JSON payload
@@ -26,12 +25,7 @@ document.getElementById('webhookForm').addEventListener('submit', function (even
     "content": "@chxrgxr1.",
     "embeds": [
         {
-            "color": 4321431,
-            "timestamp": "",
-            "url": "https://discord.com",
-            "fields": [
-                {}
-            ],
+            "color": 000,
             "title": "Website Suggestion",
             "description": message
         }
