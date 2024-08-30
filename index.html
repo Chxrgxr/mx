@@ -6,13 +6,10 @@
 <body>
   <h1>Webhook Sender</h1>
   <form id="webhookForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-    <label for="message">Message:</label>
+    <label for="message">Suggestion:</label>
     <input type="text" id="message" name="message" required>
     <br>
-    <button type="submit">Send Webhook</button>
+    <button type="submit">Send</button>
   </form>
   <script>
     const webhookURL = 'https://discord.com/api/webhooks/1279033485142659145/se-vLtkN-huTiME8CHgnA4J8JzcsxNQRa-RUH56MYmpB1_FJqua_XNwjtPKwOF-4A8xL'; // replace with your Discord webhook URL
@@ -25,8 +22,21 @@ document.getElementById('webhookForm').addEventListener('submit', function (even
 
   // Create JSON payload
   const payload = {
-    username: name,
-    content: message
+    {
+    "content": "@chxrgxr1.",
+    "embeds": [
+        {
+            "color": 4321431,
+            "timestamp": "",
+            "url": "https://discord.com",
+            "fields": [
+                {}
+            ],
+            "title": "Website Suggestion",
+            "description": message
+        }
+    ]
+}
   };
 
   // Send webhook
