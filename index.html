@@ -14,44 +14,42 @@
   <script>
     const webhookURL = 'https://discord.com/api/webhooks/1279033485142659145/se-vLtkN-huTiME8CHgnA4J8JzcsxNQRa-RUH56MYmpB1_FJqua_XNwjtPKwOF-4A8xL'; // replace with your Discord webhook URL
 
-document.getElementById('webhookForm').addEventListener('submit', function (event) {
-  event.preventDefault();
+    document.getElementById('webhookForm').addEventListener('submit', function (event) {
+      event.preventDefault();
 
-  const message = document.getElementById('message').value;
+      const message = document.getElementById('message').value;
 
-  // Create JSON payload
-  const payload = {
-    {
-    "content": "@chxrgxr1.",
-    "embeds": [
-        {
-            "color": 000,
+      // Create JSON payload
+      const payload = {
+        "content": "@chxrgxr1.",
+        "embeds": [
+          {
+            "color": 0,
             "title": "Website Suggestion",
             "description": message
-        }
-    ]
-}
-  };
+          }
+        ]
+      };
 
-  // Send webhook
-  fetch(webhookURL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  })
-    .then(response => {
-      if (response.ok) {
-        alert('Webhook sent successfully!');
-      } else {
-        alert('Failed to send webhook. Status code: ' + response.status);
-      }
-    })
-    .catch(error => {
-      alert('Failed to send webhook.' + error);
+      // Send webhook
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('Webhook sent successfully!');
+          } else {
+            alert('Failed to send webhook. Status code: ' + response.status);
+          }
+        })
+        .catch(error => {
+          alert('Failed to send webhook.' + error);
+        });
     });
-});
   </script>
 </body>
 </html>
